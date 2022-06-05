@@ -1,11 +1,5 @@
-import {
-    addOne,
-    addOneWithLogs,
-    runWithLogs,
-    square,
-    squareWithLogs,
-    wrapWithLogs,
-} from '.'
+import { addOne, addOneWithLogs, square, squareWithLogs } from '.'
+import { runWithLogs, wrapWithLogs } from './numberWithLogsMonad'
 
 describe('number-with-logs monad', () => {
     test('square', () => {
