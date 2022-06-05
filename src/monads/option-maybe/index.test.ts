@@ -1,3 +1,3 @@
-describe("Option monad", () => {
-	test("hello", () => {});
-});
+describe('Option monad', () => {
+    test('hello', () => {})
+})

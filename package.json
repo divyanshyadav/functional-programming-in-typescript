@@ -1,26 +1,26 @@
 {
-	"name": "functional-programming-with-javascript",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "jest src --watch"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/divyanshyadav/functional-programming-with-javascript.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/divyanshyadav/functional-programming-with-javascript/issues"
-	},
-	"homepage": "https://github.com/divyanshyadav/functional-programming-with-javascript#readme",
-	"dependencies": {},
-	"devDependencies": {
-		"@types/jest": "^28.1.1",
-		"jest": "^28.1.0",
-		"ts-jest": "^28.0.4",
-		"typescript": "^4.7.3"
-	}
+    "name": "functional-programming-with-javascript",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest src --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/divyanshyadav/functional-programming-with-javascript.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/divyanshyadav/functional-programming-with-javascript/issues"
+    },
+    "homepage": "https://github.com/divyanshyadav/functional-programming-with-javascript#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "^28.1.1",
+        "jest": "^28.1.0",
+        "ts-jest": "^28.0.4",
+        "typescript": "^4.7.3"
+    }
 }
