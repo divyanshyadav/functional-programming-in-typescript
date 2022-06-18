@@ -1,4 +1,4 @@
-# Functional programming with Javascript
+# Functional programming in TypeScript
 
 ## References
 
