@@ -7,7 +7,6 @@ export default class Maybe extends Container {
     }
 
     map(fn: MapFunction) {
-        if (this.isNothing()) return this
-        return new Maybe(fn(this.value))
+        return this.isNothing() ? this : new Maybe(fn(this.value))
     }
 }
