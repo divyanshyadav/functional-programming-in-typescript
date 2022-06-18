@@ -3,7 +3,7 @@ import Container from './Container'
 
 export default class Maybe extends Container {
     isNothing() {
-        return this.value === undefined || this.value === null
+        return [undefined, null].includes(this.value)
     }
 
     map(fn: MapFunction) {
