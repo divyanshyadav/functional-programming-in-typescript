@@ -6,3 +6,8 @@ export interface Mappable {
 
 export const map = (fn: MapFunction) => (anyFunctor: Mappable) =>
     anyFunctor.map(fn)
+
+export const compose =
+    (...fns: MapFunction[]) =>
+    (...args: any[]) =>
+        fns.reduceRight((acc: any, fn) => [fn.apply(null, acc)], args)[0]

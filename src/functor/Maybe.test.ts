@@ -1,3 +1,4 @@
+import { compose, map } from '../utils/functionalUtils'
 import { add } from '../utils/mathUtils'
 import { prop } from '../utils/objectUtils'
 import { match } from '../utils/stringUtils'
@@ -34,11 +35,8 @@ describe('Maybe', () => {
 
     it('should return empty container if prop not on object', () => {
         const container = Maybe.of({ name: 'red' })
-        const emptyContainer = container
-            .map(prop('age'))
-            .map(add(10))
-            .map(add(20))
-        expect(emptyContainer.isNothing()).toEqual(true)
+        const getAgeAndAddTen = compose(map(add(10)), map(prop('age')))
+        expect(getAgeAndAddTen(container).isNothing()).toBeTruthy()
     })
 
     it('should not return empty container if prop on object', () => {
