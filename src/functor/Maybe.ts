@@ -1,22 +1,13 @@
-import { MapFunction, Mappable } from '../utils/functionalUtils'
+import { MapFunction } from '../utils/functionalUtils'
+import Container from './Container'
 
-export default class Maybe implements Mappable {
-    value: any
-
-    static of(value: any) {
-        return new Maybe(value)
-    }
-
-    constructor(value: any) {
-        this.value = value
-    }
-
+export default class Maybe extends Container {
     isNothing() {
         return this.value === undefined || this.value === null
     }
 
     map(fn: MapFunction) {
         if (this.isNothing()) return this
-        return Maybe.of(fn(this.value))
+        return new Maybe(fn(this.value))
     }
 }

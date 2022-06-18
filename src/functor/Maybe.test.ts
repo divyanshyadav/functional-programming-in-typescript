@@ -6,41 +6,41 @@ import Maybe from './Maybe'
 
 describe('Maybe', () => {
     it('should return the same container if value is null', () => {
-        const container = Maybe.of(null)
+        const container = new Maybe(null)
         expect(container.map(a => a)).toBe(container)
     })
 
     it('should return the same container if value is null', () => {
-        const container = Maybe.of(undefined)
+        const container = new Maybe(undefined)
         expect(container.map(a => a)).toBe(container)
     })
 
     it('should return new container if value is not null or undefined', () => {
-        const container = Maybe.of(1)
+        const container = new Maybe(1)
         expect(container.map(a => a)).not.toBe(container)
         expect(container.map(a => a) instanceof Maybe).toBe(true)
     })
 
     it('should return true if value is matched', () => {
-        const container = Maybe.of('hello')
+        const container = new Maybe('hello')
         expect(container.map(match(/h/g)).value).toEqual(['h'])
     })
 
     it("should return empty container if value doesn't matched", () => {
-        const container = Maybe.of('hello')
+        const container = new Maybe('hello')
         const emptyContainer = container.map(match(/a/g))
         expect(emptyContainer.isNothing()).toEqual(true)
         expect(emptyContainer.map(a => a)).toEqual(emptyContainer)
     })
 
     it('should return empty container if prop not on object', () => {
-        const container = Maybe.of({ name: 'red' })
+        const container = new Maybe({ name: 'red' })
         const getAgeAndAddTen = compose(map(add(10)), map(prop('age')))
         expect(getAgeAndAddTen(container).isNothing()).toBeTruthy()
     })
 
     it('should not return empty container if prop on object', () => {
-        const container = Maybe.of({ name: 'red', age: 10 })
+        const container = new Maybe({ name: 'red', age: 10 })
         const newContainer = container
             .map(prop('age'))
             .map(add(10))
