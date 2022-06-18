@@ -1,6 +1,6 @@
-import { MapFunction } from '../utils/functionalUtils'
+import { MapFunction, Mappable } from '../utils/functionalUtils'
 
-export default class Maybe {
+export default class Maybe implements Mappable {
     value: any
 
     static of(value: any) {
